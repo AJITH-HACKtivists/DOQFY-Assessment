@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+.container{
+    width:80%;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control{
+    width: 100%;
+
+}
+
+.form-control-div .labels-div{
+  margin: 1rem 0;
+}
+
+.secret-key{
+ height: 2rem;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    margin: 1.5rem 0;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+}
+
+.container form h1{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.custom-errors,.errorlist{
+    padding: 0;
+    color: red;
+    list-style: none;
+}
+
+.links-container{
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    word-break: break-word;
+}
+
+.snippet-container{
+    max-width: 80%;
+    
+}
+
+.snippet-container p{
+    width: 100%;
+    word-break: break-word;
+}
+
+.secret-key-form label, input, button{
+    display: block;
+}
+
+.secret-key-form form{
+    display: flex;
+    direction: row;
+    gap:5%;
+    flex-wrap: wrap;
+}
+
+.secret-key-form form label{
+    flex: 0 0 20%;
+
+}
+
+.secret-key-form form input{
+    flex:1 1 60%
+}
+
+.secret-key-form form button{
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.errors{
+    color: red;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .secret-key-form form{
+        flex-direction: column;
+    }
+    .secret-key-form form input{
+        width: 90%;
+        margin:1rem 0;
+    }
+    .secret-key-form form label{
+        width:100%;
+        margin:1rem 0;
+    }
+    .secret-key-form form button{
+        width: 30%;
+        margin:1rem 0;
+    }
+  }

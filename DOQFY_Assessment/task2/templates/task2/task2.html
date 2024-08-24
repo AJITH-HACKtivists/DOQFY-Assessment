@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="{% static 'task2/styles.css' %}"> 
+    <title>Create Snippet View</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <h1>Sinppet Creation</h1>
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-control-div">
+                <div class="labels-div">{{field.label_tag}}</div>
+                <div>{{field}}</div>
+                <div>{{field.errors}}</div>
+            </div>
+            {% endfor %}
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
+        {% if errors %}
+          <ul class="custom-errors">
+            {% for error_type, error_message in errors.items %}
+                <li>{{ error_message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+    </div>    
+
+    {% if sharable_url %}
+    <div class="links-container">
+        <h1>Sharable link</h1>
+        <a href="{{sharable_url}}">{{sharable_url}}</a>
+    </div>
+    {% endif %}
+</body>
+</html>
