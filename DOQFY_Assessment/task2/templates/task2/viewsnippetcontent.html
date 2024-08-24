@@ -16,7 +16,7 @@
         {% csrf_token %}
         <label>Enter your Secret Key</label>
         <input  type="password" name="secret_key" placeholder="Please Enter Secret Key"/>
-        <button  type="submit">submit</button>
+        <button  type="submit" {% if text %}disabled{% endif %} >submit</button>
     
 
     </form>
